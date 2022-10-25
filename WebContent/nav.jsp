@@ -13,7 +13,7 @@
 	%>
 		<div>
 			<a href="memList.jsp">회원관리</a>
-	        <a href="boradList.jsp">게시판관리</a>
+	        <a href="boardList.jsp">게시판관리</a>
 	        <a href="logout.jsp">로그아웃</a>
 	    </div>
 	<%
