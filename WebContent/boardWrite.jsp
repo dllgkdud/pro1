@@ -26,11 +26,10 @@
 .brd { display: block; width: 1200px; margin: 50px auto; }
 .brd_wrap { display: table; width: 1000px; margin: 40px auto; border-collapse: collapse; text-align: center; }
 .brd_tbody { display: table-row; }
-.brd_tbody th { display: table-cell; height: 40px; border-bottom: 2px solid #002c5f; border-top: 2px solid #002c5f; background-color: #002c5f; color: #fff;}
-.brd_tbody td { display: table-cell; height: 40px; border-bottom: 1px solid #999; }
-.brd_tbody td:first-child { width: 400px; text-align: center; }
-.brd_tbody td:nth-child(2) { width: 400px; padding-left: 0; }
-.brd_tbody td:last-child { width: 400px; text-align: center; padding-left: 2em; }
+.brd_tbody th { display: table-cell; height: 40px; border: 2px solid #002c5f; background-color: #002c5f; color: #fff;}
+.brd_tbody td { display: table-cell; height: 40px; border: 1px solid #999; text-align: center; }
+.brd_tbody td > input { width: 800px; height: 38px; padding-left: 1em; }
+.brd_tbody td > textarea { width: 800px; height: 350px; padding-left: 1em; resize: none; }
 .btn_wrap { clear: both; text-align: center; }
 .btn_wrap > a { display: block; float:left; width: 295px; height: 27px; line-height: 25px; margin-left: 130px; border-radius: 10px; border: 2px solid #888; background-color: #f6f3f2; text-align: center; color: #666; font-size: 16px; font-weight: 600; }
 .btn_wrap > button { display: block; float:left; width: 300px; height: 30px; line-height: 25px; margin-left: 150px; border-radius: 10px; border: 2px solid #002c5f; background-color: #002c5f; text-align: center; color: #fff; font-size: 16px; font-weight: 600; }
@@ -76,7 +75,7 @@
 	            <div class="page_wrap">
 	                <h2 class="page_tit">글 작성</h2>
                 	<div class="brd">
-                		<form name="frm" action="boardModifyPro.jsp" method="post" class="frm">
+                		<form name="frm" action="boardWritePro.jsp" method="post" class="frm">
 	                		<table class="brd_wrap">
 	                			<tbody class="brd_tbody">
 	                				<tr>
@@ -90,14 +89,14 @@
 	                				<tr>
 	                					<th>작성자</th>
 	                					<td> 
-	                						<input type="text" name="author" id="author" value="<%=bid %>" required />
+	                						<%=bid %><input type="hidden" name="author" id="author" value="<%=bid %>">
                 						</td>
 	                				</tr>
 	                			</tbody>
 	                		</table>
 	                		<div class="btn_wrap">
-	                			<a href="boardList.jsp">게시판목록</a>
-	                			<button type="submit">글 수정</button>
+	                			<a href="boardList.jsp">목록보기</a>
+	                			<button type="submit">글 작성</button>
 	                		</div>
 	                	</form>
                 	</div>

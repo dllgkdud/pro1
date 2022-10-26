@@ -62,8 +62,8 @@
 .lst_tr td:nth-child(3) { width:100px; text-align: center; }
 .lst_tr td:last-child { width: 200px; text-align: center; }
 .lst_tr td > a { color: #888; }
-.btn_wrap { clear: both; width: 400px; height:30px; margin: 50px auto; border-radius: 10px; border: 2px solid #002c5f; background-color:#002c5f; text-align: center; }
-.btn_wrap > a { color: #fff; font-size: 16px; line-height: 25px; }
+.btn_wrap { clear: both; width: 400px; height:40px; margin: 50px auto; border-radius: 10px; border: 2px solid #002c5f; background-color:#002c5f; text-align: center; }
+.btn_wrap > a { color: #fff; font-size: 16px; line-height: 35px; }
 .btn_wrap:hover { background-color:#007fa8; }
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
