@@ -1,5 +1,5 @@
 -- junit
-
+select sysdate now from dual;
 
 -- 테이블
 create table member1 (
