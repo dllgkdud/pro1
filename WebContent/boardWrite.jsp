@@ -28,13 +28,15 @@
 .brd_tbody { display: table-row; }
 .brd_tbody th { display: table-cell; height: 40px; border: 2px solid #002c5f; background-color: #002c5f; color: #fff;}
 .brd_tbody td { display: table-cell; height: 40px; border: 1px solid #999; text-align: center; }
-.brd_tbody td > input { width: 800px; height: 38px; padding-left: 1em; }
-.brd_tbody td > textarea { width: 800px; height: 350px; padding-left: 1em; resize: none; }
-.btn_wrap { clear: both; text-align: center; }
-.btn_wrap > a { display: block; float:left; width: 295px; height: 27px; line-height: 25px; margin-left: 130px; border-radius: 10px; border: 2px solid #888; background-color: #f6f3f2; text-align: center; color: #666; font-size: 16px; font-weight: 600; }
-.btn_wrap > button { display: block; float:left; width: 300px; height: 30px; line-height: 25px; margin-left: 150px; border-radius: 10px; border: 2px solid #002c5f; background-color: #002c5f; text-align: center; color: #fff; font-size: 16px; font-weight: 600; }
-.btn_wrap > a:hover { background-color: #e4dcd3; }
-.btn_wrap > button:hover { background-color: #007fa8; }
+.brd_tbody td > input { width: 800px; height: 38px; padding-left: 1em; font-size: 16px; }
+.brd_tbody td > textarea { width: 800px; height: 350px; padding-left: 1em; padding-top: 1em; resize: none; font-size: 14px;  }
+.btn_wrap { clear: both; width: 90%; text-align: center; }
+.btn_wrap > a { width: 400px; height: 40px; margin: 50px ; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
+padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
+.btn_wrap > button { width: 120px; height: 46px; margin: 50px ; border: 2px solid #888; background-color:#888; color: #fff; 
+padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
+.btn_wrap > a:hover { background-color:#007fa8; }
+.btn_wrap > button:hover { background-color:#666; }
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
 </style>
@@ -103,9 +105,17 @@
                 </div>
             </section>
 		</div>
-		<footer class="ft">
-	    	<%@ include file="foot.jsp" %>
-	    </footer>
+		<script>
+        var opt = document.getElementsByClassName("sel");
+        for(var i=0;i<opt.length;i++){
+            opt[i].addEventListener("change", function(){
+                location.href = this.value;
+            });
+        }
+        </script>
+        <footer class="ft">
+            <%@ include file="foot.jsp" %>
+        </footer>
 	</div>
 </body>
 </html>

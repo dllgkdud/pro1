@@ -34,17 +34,14 @@
 .list_wrap { display: table; width: 800px; margin: 40px auto; margin-bottom: 200px; border-collapse: collapse; }
 .list_wrap > tbody { height: 150px; }
 .lst_tr { display: table-row; }
-.lst_tr th { display: table-cell; height: 40px; border-bottom: 2px solid #002c5f; border-top: 2px solid #002c5f; background-color: #002c5f; color: #fff; }
-.lst_tr td { display: table-cell; height: 40px; padding-top: 50px; border-bottom: 1px solid #999; }
-.lst_tr td:first-child { width: 50px; text-align: center; }
-.lst_tr td:nth-child(2) { padding-left: 20px; }
-.lst_tr td:nth-child(3) { text-align: center; }
-.lst_tr td:nth-child(3) { text-align: center; }
-.lst_tr td:last-child { text-align: center; }
+.lst_tr th { display: table-cell; width: 150px; height: 40px; border-bottom: 2px solid #002c5f; border-top: 2px solid #002c5f; background-color: #002c5f; color: #fff; }
+.lst_tr td { display: table-cell; min-widht: 200px; height: 40px; border: 1px solid #999; padding-left: 1em;  }
 .lst_tr td > a { color: #888; }
-.btn_wrap { clear: both; text-align: center; }
-.btn_wrap > a { width: 400px; height: 40px; margin: 50px ; border-radius: 3px; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
-padding: 10px; font-size: 16px; line-height: 25px; }
+.btn_wrap { clear: both; width: 100%; margin-left: 10px; text-align: center; }
+.btn_wrap > a { width: 400px; height: 40px; margin: 50px ; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
+padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
+.btn_wrap > a:nth-child(2), .btn_wrap > a:last-child { width: 400px; height: 40px; margin: 50px ; border: 2px solid #888; background-color:#888; color: #fff; 
+padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
 .btn_wrap > a:hover { background-color:#007fa8; }
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
@@ -104,24 +101,26 @@ padding: 10px; font-size: 16px; line-height: 25px; }
 	                <h2 class="page_tit">상세글</h2>
                 	<div class="list">
                 		<table class="list_wrap">
-                			<thead class="lst_thead">
-                				<tr class="lst_tr">
-                					<th>번호</th>
-                					<th>제목</th>
-                					<th>내용</th>
-                					<th>작성자</th>
-                					<th>작성일</th>
-                				</tr>
-                			</thead>
-                			<tbody>
-                				<tr>
-                					<td><%=rs.getInt("no") %></td>
-                					<td><%=rs.getString("tit") %></td>
-                					<td><%=rs.getString("cont") %></td>
-                					<td><%=rs.getString("nam") %></td>
-                					<td><%=rs.getString("res") %></td>
-                				</tr>
-                			</tbody>
+               				<tr class="lst_tr">
+               					<th>번호</th>
+               					<td><%=rs.getInt("no") %></td>
+               				</tr>
+               				<tr class="lst_tr">
+               					<th>제목</th>
+               					<td><%=rs.getString("tit") %></td>
+               				</tr>
+               				<tr class="lst_tr">
+               					<th>내용</th>
+               					<td><%=rs.getString("cont") %></td>
+               				</tr>
+            				<tr class="lst_tr">
+               					<th>작성자</th>
+               					<td><%=rs.getString("nam") %></td>
+               				</tr>
+               				<tr class="lst_tr">
+               					<th>작성일</th>
+               					<td><%=rs.getString("res") %></td>
+							</tr>
 <%
 		}
 %>

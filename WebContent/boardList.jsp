@@ -55,14 +55,14 @@
 .list { display: block; width: 800px; margin: 50px auto; }
 .list_wrap { display: table; width: 600px; margin: 40px auto; border-collapse: collapse; }
 .lst_tr { display: table-row; }
-.lst_tr th { display: table-cell; height: 40px; border-bottom: 2px solid #002c5f; border-top: 2px solid #002c5f; background-color: #002c5f; color: #fff; }
+.lst_tr th { display: table-cell; height: 40px; border: 2px solid #002c5f; background-color: #002c5f; color: #fff; letter-spacing: -1px; font-weight: 600; }
 .lst_tr td { display: table-cell; height: 40px; border-bottom: 1px solid #999; }
 .lst_tr td:first-child { width: 50px; text-align: center; }
 .lst_tr td:nth-child(2) { width: 250px; padding-left: 20px; }
 .lst_tr td:nth-child(3) { width:100px; text-align: center; }
 .lst_tr td:last-child { width: 200px; text-align: center; }
 .lst_tr td > a { color: #888; }
-.btn_wrap { clear: both; width: 400px; height:40px; margin: 50px auto; border-radius: 10px; border: 2px solid #002c5f; background-color:#002c5f; text-align: center; }
+.btn_wrap { clear: both; margin-left: 20px; font-size: 16px; letter-spacing: -1px; font-weight: 600; background-color: #002c5f; border: 1px solid #002c5f; width: 400px; height:40px; margin: 50px auto; text-align: center; }
 .btn_wrap > a { color: #fff; font-size: 16px; line-height: 35px; }
 .btn_wrap:hover { background-color:#007fa8; }
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
@@ -157,7 +157,11 @@
 						%>
 							<a href="boardWrite.jsp">글쓰기</a>
 						<%
-							} 
+							} else {
+						%>
+								<a href="login.jsp">글쓰기</a>
+						<%
+							}
 						%>
 						</div>
 					</div>

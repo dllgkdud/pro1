@@ -20,7 +20,7 @@
 		} else if(id!=null) {
 	%>
 		<div>
-			<span class="ip_print"><%=id %>님</span>
+			<span class="ip_print"><%=name %>님</span>
 			<a href="logout.jsp">로그아웃</a>
 	        <a href="memInfo.jsp">회원정보</a>
 	    </div>

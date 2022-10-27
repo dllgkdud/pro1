@@ -50,23 +50,20 @@
 .page:after { content: ""; display: block; clear: both; }
 .page_wrap { width: 1200px; margin: auto; }
 .page_tit { margin: 50px; }
-.brd { display: block; width: 800px; margin: 50px auto; }
-.brd_wrap { display: table; width: 600px; margin: 40px auto; border-collapse: collapse; }
-.brd_thead { display: table-row; }
-.brd_thead th { display: table-cell; height: 40px; border-bottom: 2px solid #002c5f; border-top: 2px solid #002c5f; background-color: #002c5f; color: #fff; }
-.brd_thead td { display: table-cell; height: 40px; border: 1px solid #999; }
-.brd_thead td:first-child { display: block; width: 50px; height: 30px; text-align: center; }
-.brd_thead td:nth-child(2) { padding-left: 20px; }
-.brd_thead td:nth-child(3) { text-align: center; }
-.brd_thead td:nth-child(4) { text-align: center; }
-.brd_thead td:last-child { text-align: center; }
-.btn_wrap { clear: both; margin: 50px 200px; text-align: center; }
-.btn_wrap > a { width: 400px; height: 40px; margin: 50px ; border-radius: 3px; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
-padding: 10px; font-size: 16px; line-height: 25px; }
-.btn_wrap > button { width: 100px; height: 45px; margin: 45px ; border-radius: 3px; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
-padding: 10px; font-size: 16px; line-height: 25px; }
+.brd { display: block; width: 1200px; margin: 50px auto; }
+.brd_wrap { display: table; width: 1000px; margin: 40px auto; border-collapse: collapse; text-align: center; }
+.brd_tbody { display: table-row; }
+.brd_tbody th { display: table-cell; height: 40px; border: 2px solid #002c5f; background-color: #002c5f; color: #fff;}
+.brd_tbody td { display: table-cell; height: 40px; border: 1px solid #999; text-align: center; }
+.brd_tbody td > input { width: 800px; height: 38px; padding-left: 1em; font-size: 16px; }
+.brd_tbody td > textarea { width: 800px; height: 350px; padding-left: 1em; padding-top: 1em;  resize: none; font-size: 14px; }
+.btn_wrap { clear: both; width: 90%; text-align: center; }
+.btn_wrap > a { width: 400px; height: 40px; margin: 50px ; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
+padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
+.btn_wrap > button { width: 120px; height: 46px; margin: 50px ; border: 2px solid #888; background-color:#888; color: #fff; 
+padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
 .btn_wrap > a:hover { background-color:#007fa8; }
-.btn_wrap > button:hover { background-color:#007fa8; }
+.btn_wrap > button:hover { background-color:#666; }
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
 </style>
@@ -109,7 +106,7 @@ padding: 10px; font-size: 16px; line-height: 25px; }
                 	<div class="brd">
                 		<form name="frm" action="boardModifyPro.jsp" method="post" class="frm">
 	                		<table class="brd_wrap">
-	                			<thead class="brd_thead">
+	                			<tbody class="brd_tbody">
 	                				<tr>
 	                					<th>글 번호</th>
 	                					<td><%=no %><input type="hidden" name="no" value="<%=no %>" required></td>
@@ -128,7 +125,7 @@ padding: 10px; font-size: 16px; line-height: 25px; }
 	                					<th>작성자</th>
 	                					<td><%=bname %></td>
 	                				</tr>
-	                			</thead>
+	                			</tbody>
 	                		</table>
 	                		<div class="btn_wrap">
 	                			<a href="boardList.jsp">게시판목록</a>

@@ -16,6 +16,7 @@
 <meta property="og:image" content="">
 <meta property="og:image:width" content="">
 <meta property="og:image:height" content="">
+<link rel="icon" href="./img/logo.ico" sizes="32x32">
 
 <!-- 파비콘 -->
 <link rel="shortcut icon" type="" href="">
