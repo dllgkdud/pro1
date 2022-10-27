@@ -84,7 +84,7 @@
             </figure>
             <div class="bread">
                 <div class="bread_fr">
-                    <a href="index.html" class="home">홈</a> &gt;
+                    <a href="index.jsp" class="home">홈</a> &gt;
                     <span class="sel">회원목록</span>
                 </div>
             </div>

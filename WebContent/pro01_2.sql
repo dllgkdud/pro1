@@ -8,6 +8,7 @@ create table faq1 (
     qna number not null,        -- 질문(0) / 답변(1) 구분(boolean도 사용 가능)
     parno number not null      -- 질문(1)과 답변(1)의 공통 번호
     );
+desc faq1;
 
 -- 게시판 번호 설정
 create sequence fseq;

@@ -4,9 +4,9 @@
     <div class="ft_logo"><img src="./img/logo_footer.png" alt=""></div>
     <div class="ft_box">
         <nav class="fnb">
-            <a href="member01.html">저작권안내</a>
-            <a href="member02.html" class="dpc">개인정보 처리방침</a>
-            <a href="member03.html">이용약관</a>
+            <a href="member01.jsp">저작권안내</a>
+            <a href="member02.jsp" class="dpc">개인정보 처리방침</a>
+            <a href="member03.jsp">이용약관</a>
         </nav>
         <p class="addr">고객센터 : 080-600-6000(승용), 080-200-6000(상용)</p>
         <p class="copyright">COPYRIGHT ⓒ HYUNDAI MOTOR COMPANY. ALL RIGHTS RESERVED.</p>
@@ -15,7 +15,7 @@
         <select name="sel" id="sel" class="sel" onchange="sel_link(this)">
             <option value="">Family Site</option>
             <option value="https://www.hyundai.co.kr/main/mainRecommend">현대자동차그룹</option>
-            <option value="https://www.genesis.com/kr/ko/main.html">제네시스닷컴</option>
+            <option value="https://www.genesis.com/kr/ko/main">제네시스닷컴</option>
             <option value="https://casper.hyundai.com/">캐스퍼 온라인</option>
             <option value="https://www.hyundai-n.com/">N 브랜드</option>
             <option value="https://gbic.hyundai.com/main.do">글로벌경영연구소</option>

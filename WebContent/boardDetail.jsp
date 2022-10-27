@@ -92,7 +92,7 @@ padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; fo
             </figure>
             <div class="bread">
                 <div class="bread_fr">
-                    <a href="index.html" class="home">홈</a> &gt;
+                    <a href="index.jsp" class="home">홈</a> &gt;
                     <span class="sel">상세글</span>
                 </div>
             </div>

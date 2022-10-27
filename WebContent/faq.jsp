@@ -7,7 +7,9 @@
 	response.setContentType("text/html; charset=UTF-8");
 	
 	String fid = (String) session.getAttribute("id");
-
+	if(fid==null){
+		fid="other";
+	}
 %>
 <%@ include file="connectionPool.conf" %>
 <%
@@ -39,6 +41,18 @@
 .bread_fr { width: 1200px; margin: 20px 30px; }
 .home { color: #222; }
 .sel { color: #007fa8; }
+.list { display: block; width: 800px; margin: 50px auto; }
+.list_wrap { display: table; width: 600px; margin: 40px auto; border-collapse: collapse; }
+.lst_tr { display: table-row; }
+.lst_tr th { display: table-cell; height: 40px; border: 2px solid #002c5f; background-color: #002c5f; color: #fff; letter-spacing: -1px; font-weight: 600; }
+.lst_tr td { display: table-cell; height: 40px; border-bottom: 1px solid #999; }
+.lst_tr td:first-child { width: 50px; }
+.lst_tr td:last-child { width: 200px; }
+.lst_tr td > a { color: #888; }
+.btn_wrap { clear: both; margin-left: 20px; font-size: 16px; letter-spacing: -1px; font-weight: 600; background-color: #002c5f; border: 1px solid #002c5f; width: 400px; height:40px; margin: 50px auto; text-align: center; }
+.btn_wrap:last-child { display: none; }
+.btn_wrap > a { color: #fff; font-size: 16px; line-height: 35px; }
+.btn_wrap:hover { background-color:#007fa8; }
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
 </style>
@@ -71,7 +85,7 @@
 	            </figure>
 	            <div class="bread">
 	                <div class="bread_fr">
-	                    <a href="index.html" class="home">홈</a> &gt;
+	                    <a href="index.jsp" class="home">홈</a> &gt;
 	                    <span class="sel">FAQ목록</span>
 	                </div>
 	            </div>
@@ -88,39 +102,39 @@
 	                			</thead>
 	                			<tbody>
 	                		<%
-								while(rs.next()) {	
+								while(rs.next()) {
 	                		%>
 	                				<tr class="lst_tr">
                 				<%
                 					if(rs.getInt("qna")==0) {
                 				%>
 	                					<td><input type="hidden" value='<%=rs.getInt("qna") %>'>[ 질문 ]</td>
-	                					<td><a href="faqDetail.jsp"><%=rs.getString("title") %></a></td>	                					
+	                					<td><a href="faqDetail.jsp" ><%=rs.getString("title") %></a></td>	                					
 	                			<%
                 					} else {
 	                			%>
 	                					<td><input type="hidden" value='<%=rs.getInt("qna") %>'>[ 답변 ]</td>
-	                					<td><%=rs.getString("title") %></td>                					
+	                					<td><a style="padding-left:2em;"><%=rs.getString("title") %></a></td>          					
 	                			<%
                 					}
 								}
 	                		%>
 <%@ include file="connectionClose.conf" %>	                		
 	                			</tbody>
-	                			<div class="btn_wrap">
+	                		</table>
+	                		<div class="btn_wrap">
 								<%
 									if(fid.equals("admin")) {
 								%>
-									<a href="faqWrite.jsp">FAQ 작성</a>
+										<a href="faqWrite.jsp">FAQ 작성</a>
 								<%
-									} 
+									}
 								%>
-								</div>
-	                		</table>
+							</div>
 	                	</div>
 	                </div>
 				</section>
-		</div>
+			</div>
 		<footer class="ft">
 	    	<%@ include file="foot.jsp" %>
 	    </footer>

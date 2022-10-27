@@ -68,18 +68,18 @@ $(document).ready(function(){
             </figure>
             <div class="bread">
                 <div class="bread_fr">
-                    <a href="index.html" class="home">홈</a> &gt;
+                    <a href="index.jsp" class="home">홈</a> &gt;
                     <select name="sel1" id="sel1" class="sel">
                         <option>네트워크</option>
-                        <option value="purchase.html#page1">구매정보</option>
-                        <option value="membership.html#page1">멤버십</option>
-                        <option value="service.html#page1">고객지원</option>
-                        <option value="company.html#page1">회사소개</option>
+                        <option value="purchase.jsp#page1">구매정보</option>
+                        <option value="membership.jsp#page1">멤버십</option>
+                        <option value="service.jsp#page1">고객지원</option>
+                        <option value="company.jsp#page1">회사소개</option>
                     </select> &gt;
                     <select name="opt" id="sel1" class="sel">
                         <option>전시장</option>
-                        <option value="network.html#page2">판매/시승</option>
-                        <option value="network.html#page3">엑시던트 스페이스</option>
+                        <option value="network.jsp#page2">판매/시승</option>
+                        <option value="network.jsp#page3">엑시던트 스페이스</option>
                     </select>
                 </div>
             </div>
@@ -153,18 +153,18 @@ $(document).ready(function(){
             </figure>
             <div class="bread">
                 <div class="bread_fr">
-                    <a href="index.html" class="home">홈</a> &gt;
+                    <a href="index.jsp" class="home">홈</a> &gt;
                     <select name="sel2" id="sel2" class="sel">
                         <option>네트워크</option>
-                        <option value="purchase.html#page1">구매정보</option>
-                        <option value="membership.html#page1">멤버십</option>
-                        <option value="service.html#page1">고객지원</option>
-                        <option value="company.html#page1">회사소개</option>
+                        <option value="purchase.jsp#page1">구매정보</option>
+                        <option value="membership.jsp#page1">멤버십</option>
+                        <option value="service.jsp#page1">고객지원</option>
+                        <option value="company.jsp#page1">회사소개</option>
                     </select> &gt
                     <select name="opt" id="sel2" class="sel">
                         <option>판매/시승</option>
-                        <option value="network.html#page1">전시장</option>
-                        <option value="network.html#page3">엑시던트 스페이스</option>
+                        <option value="network.jsp#page1">전시장</option>
+                        <option value="network.jsp#page3">엑시던트 스페이스</option>
                     </select>
                 </div>
             </div>
@@ -184,18 +184,18 @@ $(document).ready(function(){
             </figure>
             <div class="bread">
                 <div class="bread_fr">
-                    <a href="index.html" class="home">홈</a> &gt;
+                    <a href="index.jsp" class="home">홈</a> &gt;
                     <select name="sel3" id="sel3" class="sel">
                         <option>네트워크</option>
-                        <option value="purchase.html#page1">구매정보</option>
-                        <option value="membership.html#page1">멤버십</option>
-                        <option value="service.html#page1">고객지원</option>
-                        <option value="company.html#page1">회사소개</option>
+                        <option value="purchase.jsp#page1">구매정보</option>
+                        <option value="membership.jsp#page1">멤버십</option>
+                        <option value="service.jsp#page1">고객지원</option>
+                        <option value="company.jsp#page1">회사소개</option>
                     </select> &gt
                     <select name="opt" id="sel3" class="sel">
                         <option>엑시던트 스페이스</option>
-                        <option value="network.html#page1">전시장</option>
-                        <option value="network.html#page2">판매/시승</option>
+                        <option value="network.jsp#page1">전시장</option>
+                        <option value="network.jsp#page2">판매/시승</option>
                     </select>
                 </div>
             </div>
