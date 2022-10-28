@@ -4,16 +4,10 @@
 <%
 	request.setCharacterEncoding("UTF-8");
 	response.setCharacterEncoding("UTF-8");
-	response.setContentType("text/html; charset=UTF-8");
+	response.setContentType("UTF-8");
 	
-	String bid = (String) session.getAttribute("id");
-%>	
-<%@ include file="connectionPool.conf" %>
-<%
-		sql = "select a.no no, a.title title, a.content content, b.name name, a.author author, a.resdate resdate from board1 a inner join member1 b on a.author=b.id order by a.resdate desc";
-		pstmt = con.prepareStatement(sql);
-		rs = pstmt.executeQuery();
-		
+	String qid = (String) session.getAttribute("id");
+	int cnt = 0;
 %>
 <!DOCTYPE html>
 <html>
@@ -47,11 +41,10 @@
 .lst_tr { display: table-row; }
 .lst_tr th { display: table-cell; height: 40px; border: 2px solid #002c5f; background-color: #002c5f; color: #fff; letter-spacing: -1px; font-weight: 600; }
 .lst_tr td { display: table-cell; height: 40px; border-bottom: 1px solid #999; }
-.lst_tr td:first-child { width: 50px; text-align: center; }
-.lst_tr td:nth-child(2) { width: 250px; padding-left: 20px; }
-.lst_tr td:nth-child(3) { width:100px; text-align: center; }
+.lst_tr td:first-child { width: 50px; }
 .lst_tr td:last-child { width: 200px; text-align: center; }
 .lst_tr td > a { color: #888; }
+.lst_tr td > p { display: none; }
 .btn_wrap { clear: both; margin-left: 20px; font-size: 16px; letter-spacing: -1px; font-weight: 600; background-color: #002c5f; border: 1px solid #002c5f; width: 400px; height:40px; margin: 50px auto; text-align: center; }
 .btn_wrap > a { color: #fff; font-size: 16px; line-height: 35px; }
 .btn_wrap:hover { background-color:#007fa8; }
@@ -82,73 +75,76 @@ $(window).scroll(function () {
             <div class="bread">
                 <div class="bread_fr">
                     <a href="index.jsp" class="home">홈</a> &gt;
-                    <span class="sel">게시판목록</span>
+                    <span class="sel">문의사항</span>
                 </div>
             </div>
+<%@ include file="connectionPool.conf" %>
+<%
+	sql = "select * from qna1 order by lev asc, parno desc";
+	pstmt = con.prepareStatement(sql);
+	rs = pstmt.executeQuery();
+%>            
             <section class="page">
 	            <div class="page_wrap">
-	                <h2 class="page_tit">게시판목록</h2>
-                	<div class="list">
-                		<table class="list_wrap" id="myTable">
-                			<thead class="lst_thead">
-                				<tr class="lst_tr">
-                					<th>번호</th>
-                					<th>제목</th>
-                					<th>작성자</th>
-                					<th>작성일</th>
-                				</tr>
-                			</thead>
-                			<tbody>
-<%
-								int cnt = 0;
-								//작성일의 날짜데이터를 특정 문자열 형식으로 변환
-								while(rs.next()){
-									cnt += 1;
-									SimpleDateFormat sm_date = new SimpleDateFormat("yyyy-MM-dd");
-									String date = sm_date.format(rs.getDate("resdate"));
-%>
-								<tr class="lst_tr">
-									<td><%=cnt %></td>
-									<%
-									if(bid!=null){
-									%>
-										<td><a href='boardDetail.jsp?no=<%=rs.getInt("no") %>'><%=rs.getString("title") %></a></td>
-									<%
-									} else {
-									%>
-										<td><%=rs.getString("title") %></td>
-									<%
-									}
-									%>
-									<td><%=rs.getString("name") %></td>
-									<td><%=date %></td>
-								</tr>
-<%
-								}
-%>
+	                <h2 class="page_tit">문의사항</h2>
+	                <div class="list">
+	                		<table class="list_wrap">
+	                			<thead class="lst_thead">
+	                				<tr class="lst_tr">
+	                					<th>번호</th>
+	                					<th>제목</th>
+	                					<th>작성자</th>
+	                					<th>작성일</th>
+	                				</tr>
+	                			</thead>
+	                			<tbody>
+               				<%
+	                			while(rs.next()) {
+	                				cnt++;
+	                				SimpleDateFormat sp_date = new SimpleDateFormat("yy-MM-dd");
+	                				String date = sp_date.format(rs.getDate("resdate"));
+                			%>
+	                				<tr class="lst_tr">
+                				<%
+	                				if(rs.getInt("lev")==0) {
+                				%>	
+                						<td><%=cnt %></td>
+	                					<td><a href='qnaDetail.jsp?no=<%=rs.getInt("no") %>'><%=rs.getString("title") %></a></td>
+	                			<%
+	                				} else {
+	                			%>
+	                					<td><p><%=cnt %></p></td>
+	                					<td><a href='qnaDetail.jsp?no=<%=rs.getInt("no") %>' style='padding-left: 2em;'><%=rs.getString("title") %></a></td>
+	                			<%
+	                				}
+	                			%>
+	                					<td><%=rs.getString("author") %></td>
+	                					<td><%=date %></td>
+	                				</tr>
+	                		<%
+	                			}
+	         				%>
+	                			</tbody>
+	                		</table>
+	                		<div class="btn_wrap">
+								<a href="qnaWrite.jsp">문의글 작성</a>
+							</div>
 <%@ include file="connectionClose.conf" %>
-							</tbody>
-						</table>
-						<div class="btn_wrap">
-						<%
-							if(bid!=null) {
-						%>
-							<a href="boardWrite.jsp">글쓰기</a>
-						<%
-							} else {
-						%>
-								<a href="login.jsp">글쓰기</a>
-						<%
-							}
-						%>
-						</div>
-					</div>
-				</div>
-			</section>
-		</div>
-    </div>
+	                	</div>
+	             </div>
+	         </section>
+	   </div>
+	</div>
+	<script>
+        var opt = document.getElementsByClassName("sel");
+        for(var i=0;i<opt.length;i++){
+            opt[i].addEventListener("change", function(){
+                location.href = this.value;
+            });
+        }
+        </script>
+	<footer class="ft">
+		    	<%@ include file="foot.jsp" %>
+	</footer>
 </body>
-<footer class="ft">
-   	<%@ include file="foot.jsp" %>
-</footer>
 </html>

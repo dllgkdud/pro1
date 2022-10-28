@@ -30,10 +30,10 @@
 .faq_con:hover { width: 18%; height: 148px; border: 2px solid #007fa8; }
 .faq_con .top_tit { display: block; margin: 20px; font-size: 18px; font-weight: 600; color: #007fa8; }
 .faq_con .top_qna { display: block; margin: 20px; font-size: 12px; line-height: 1.5; font-weight: 600; color: #444; }
-.btn_wrap { clear: both; width: 90%; text-align: center; }
-.btn_wrap > a { margin: 50px ; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
+.btn1_wrap { clear: both; width: 90%; text-align: center; }
+.btn1_wrap > a { margin: 50px ; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
 padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
-.btn_wrap > a:hover { background-color:#007fa8; }
+.btn1_wrap > a:hover { background-color:#007fa8; }
 
 .not { display: block; clear: both; position: relative; }
 .not_wrap { display: block; margin: 50px auto; position: relative; }
@@ -47,7 +47,7 @@ padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; fo
 .not_con table td > textarea { resize: none; }
 .not_con table tr th:after { content: "* "; clear: both; white-space: nowrap; color: #c50000; }
 .not_btn { position: absolute; bottom: -95px; right: 380px; z-index: 85; }
-.btn_wrap { clear: both; display: block; margin: 20px; }
+.btn2_wrap { clear: both; display: block; margin: 20px; }
 [type=reset] { width: 180px; height: 55px; margin-right: 20px; font-size: 16px; color: #fff; letter-spacing: -1px; font-weight: 600; background-color: #888; border: 1px solid #888; cursor: pointer; }
 [type=submit] { width: 180px; height: 55px; margin-left: 20px; font-size: 16px; color: #fff; letter-spacing: -1px; font-weight: 600; background-color: #002c5f; border: 1px solid #002c5f; cursor: pointer; }
 
@@ -149,8 +149,8 @@ $(document).ready(function(){
                             </div>  
                         </div>
                     </section>
-                    <div class="btn_wrap">
-	                			<a href="boardList.jsp">게시판으로 이동</a>
+                    <div class="btn1_wrap">
+	                			<a href="faq.jsp">FAQ 게시판</a>
 	                </div>
                 </div>
             </section>
@@ -215,9 +215,9 @@ $(document).ready(function(){
                             </table>
                         </div>
                         <section class="not_btn">
-                            <div class="btn_wrap">
-                                <a href=""><input type="reset" value="취소"></a>
-                                <a href="login.jsp"><input type="submit" value="등록"></a>
+                            <div class="btn2_wrap">
+                                <a><input type="reset" value="취소"></a>
+                                <a href="qna.jsp"><input type="submit" value="등록"></a>
                             </div>
                         </section>
                     </div>

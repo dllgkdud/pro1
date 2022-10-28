@@ -67,23 +67,6 @@ padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; fo
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
 </style>
-<script>
-    $(document).ready(function () {
-        $(window).scroll(function () {
-            var ht = $(window).height();
-            var tp = $(this).scrollTop();
-            if (tp >= 600) {
-                $(".hd").css("position", "fixed");
-            } else {
-                $(".hd").css("position", "absolute");
-            }
-        });
-        $
-        $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
-        $lst1_obj = $(".circle_lst li").clone();
-        $(".circle_lst.lst2").append($lst1_obj);
-    });
-</script>
 <link rel="stylesheet" href="footer.css">
 <body>
 	<div class="wrap">
@@ -118,7 +101,7 @@ padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; fo
 	                				<tr>
 	                					<th>내용</th>
 	                					<td>
-	                						<textarea cols="150" rows="30" name="content"><%=content %></textarea>
+	                						<textarea cols="150" rows="30" name="content" maxlength="600"><%=content %></textarea>
 	                					</td>
 	                				</tr>
 	                				<tr>

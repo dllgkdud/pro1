@@ -36,5 +36,6 @@ insert into faq1 values (fseq.nextval, '질문5의 답변', '현대카드M을 �
 
 -- 게시판 목록 보기
 select * from faq1 order by parno asc, qna asc;
+select * from faq1 where no=1;
 
 commit;
