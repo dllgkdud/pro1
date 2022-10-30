@@ -6,8 +6,8 @@
 관리자는 일반 회원의 관리기능인 '회원 정보 수정', '회원 강제 탈퇴', '회원 통계', '글 관리 기능' 등을 구현한다.
 
 ## 프로젝트 기획
-![Task Flow](./img/database2/taskFlow.PNG "Task Flow")
-![스토리보드](./img/database2/WebStoryBoard1.PNG "스토리보드")
+![Task Flow](./img/database2/taskFlow.png "Task Flow")
+![스토리보드](./img/database2/WebStoryBoard1.png "스토리보드")
 
 ## 프로젝트 설계
 ![개념적 설계](./img/database1/pro1_01.PNG "개념적 설계")
