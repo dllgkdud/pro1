@@ -1,15 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%	
-	String fid = (String) session.getAttribute("id");
-	int no = Integer.parseInt(request.getParameter("no"));
-%>
+<% String fid = (String)session.getAttribute("id"); %>
 <!DOCTYPE html>
 <html>
 <head>
-	<%@ include file="head.jsp" %>
-	<link rel="stylesheet" href="./css/reset2.css">
-    <link rel="stylesheet" href="header.css">
+<%@ include file="head.jsp" %>
+<link rel="stylesheet" href="./css/reset2.css">
+<link rel="stylesheet" href="header.css">
 </head>
 <style>
 .hd { width: 100%; height: 50px; position: absolute; top: 0; left: 0; z-index: 999; }
@@ -30,6 +27,7 @@
 .brd_tbody th { display: table-cell; height: 40px; border: 2px solid #002c5f; background-color: #002c5f; color: #fff;}
 .brd_tbody td { display: table-cell; height: 40px; border: 1px solid #999; text-align: center; }
 .brd_tbody td > input { width: 800px; height: 38px; padding-left: 1em; font-size: 16px; }
+.brd_tbody td > input[name="author"] { text-align: center; }
 .brd_tbody td > textarea { width: 800px; height: 350px; padding-left: 1em; padding-top: 1em;  resize: none; font-size: 14px; }
 .btn_wrap { clear: both; width: 90%; text-align: center; }
 .btn_wrap > a { width: 400px; height: 40px; margin: 50px ; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
@@ -54,69 +52,56 @@ padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; fo
             <div class="bread">
                 <div class="bread_fr">
                     <a href="index.jsp" class="home">홈</a> &gt;
-                    <span class="sel">FAQ 수정</span>
+                    <span class="sel">FAQ 작성</span>
                 </div>
             </div>
-<%@ include file="connectionPool.conf" %>
-<%
-		sql = "select * from faq1 where no=?";
-		pstmt = con.prepareStatement(sql);
-		pstmt.setInt(1, no);
-		rs = pstmt.executeQuery();
-		
-		if(rs.next()){
-%>
-            <section class="page">
+                        <section class="page">
 	            <div class="page_wrap">
-	                <h2 class="page_tit">FAQ 수정</h2>
+	                <h2 class="page_tit">글 작성</h2>
                 	<div class="brd">
-                		<form name="frm" action="faqModifyPro.jsp" method="post" class="frm">
+                		<form name="frm" action="faqWritePro.jsp" method="post" class="frm">
 	                		<table class="brd_wrap">
 	                			<tbody class="brd_tbody">
 	                				<tr>
-	                					<th><label for="no">번호</label></th>
-	                					<td><%=no %><input type="hidden" name="no" value="<%=no %>"></td>
-	                				</tr>
-	                				<tr>
 	                					<th><label for="title">제목</label></th>
-	                					<td><input type="text" name="title" value="<%=rs.getString("title") %>" required></td>
+	                					<td><input type="text" name="title" class="brd_con" required /></td>
 	                				</tr>
 	                				<tr>
-	                					<th><label for="content">내용</label></th>
-	                					<td>
-	                						<textarea cols="100" rows="10" name="content" maxlength="600"><%=rs.getString("content") %></textarea>
-	                					</td>
+	                					<th><label for="cont">질문</label></th>
+	                					<td><textarea name="cont" cols="100" rows="10" maxlength="600" ></textarea></td>
+	                				</tr>
+	                				<tr>
+	                					<th><label for="cont2">답변</label></th>
+	                					<td><textarea name="cont2" cols="100" rows="10" maxlength="600" ></textarea></td>
 	                				</tr>
 	                				<tr>
 	                					<th><label for="author">작성자</label></th>
-	                					<td><%=rs.getString("author") %></td>
+	                					<td> 
+	                						<%=fid %><input type="hidden" name="author" id="author" value="<%=fid %>">
+                						</td>
 	                				</tr>
 	                			</tbody>
 	                		</table>
-	             <%
-					}
-				%>
-				<%@ include file="connectionClose.conf" %>
 	                		<div class="btn_wrap">
-	                			<a href="faq.jsp">게시판목록</a>
-	                			<button type="submit">글 수정</button>
+	                			<a href="faq.jsp">목록보기</a>
+	                			<button type="submit">글 작성</button>
 	                		</div>
 	                	</form>
                 	</div>
                 </div>
             </section>
 		</div>
+		<script>
+        var opt = document.getElementsByClassName("sel");
+        for(var i=0;i<opt.length;i++){
+            opt[i].addEventListener("change", function(){
+                location.href = this.value;
+            });
+        }
+        </script>
+        <footer class="ft">
+            <%@ include file="foot.jsp" %>
+        </footer>
 	</div>
-<script>
-	var opt = document.getElementsByClassName("sel");
-	for(var i=0;i<opt.length;i++){
-	    opt[i].addEventListener("change", function(){
-	        location.href = this.value;
-	    });
-	}
-</script>
-<footer class="ft">
-   	<%@ include file="foot.jsp" %>
-</footer>
 </body>
 </html>

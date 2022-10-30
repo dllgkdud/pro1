@@ -123,10 +123,10 @@ padding: 10px; font-size: 16px; line-height: 25px; }
                 					<td><%=mreg %></td>
                 				</tr>
                				</tbody>
-               				<div class="btn_wrap">
-	                			<a href="memList.jsp">목록보기</a>
-	                		</div>
            				</table>
+           				<div class="btn_wrap">
+	                			<a href="memList.jsp">목록보기</a>
+                		</div>
        				</div>
                 </div>
 			</section>

@@ -50,7 +50,6 @@
 .lst_tr td:last-child { width: 200px; }
 .lst_tr td > a { color: #888; }
 .btn_wrap { clear: both; margin-left: 20px; font-size: 16px; letter-spacing: -1px; font-weight: 600; background-color: #002c5f; border: 1px solid #002c5f; width: 400px; height:40px; margin: 50px auto; text-align: center; }
-.btn_wrap:last-child { display: none; }
 .btn_wrap > a { color: #fff; font-size: 16px; line-height: 35px; }
 .btn_wrap:hover { background-color:#007fa8; }
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }

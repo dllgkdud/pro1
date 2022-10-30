@@ -29,8 +29,18 @@ insert into qna1 values (qseq.nextval, '테스트1의 답변입니다.', '테스
 -- 게시판 목록
 select * from qna1 order by lev asc, parno desc;
 
+-- 질문 작성
+-- insert into qna1 values (qseq.nextval, ?, ?, ?, sysdate, 0, qseq.currval, ?);
+
 -- 질문 수정
 update qna1 set ps='Y', title='테스트6', content='테스트6수정본테스트6수정본테스트6수정본테스트6수정본테스트6수정본', author='dllgkdud115', resdate=sysdate where no=7;
 -- update qna1 set ps=?, title=?, content=?, author=?, resdate=sysdate where no=?
+
+-- 질문 삭제
+delete from qna1 where parno=22;
+-- delete from qna1 where parno=?;
+
+-- 답변 삭제
+-- delete from qna1 where no=?;
 
 commit;

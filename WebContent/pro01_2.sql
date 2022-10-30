@@ -38,4 +38,9 @@ insert into faq1 values (fseq.nextval, '질문5의 답변', '현대카드M을 �
 select * from faq1 order by parno asc, qna asc;
 select * from faq1 where no=1;
 
+-- 게시판 작성
+-- insert into faq1 values (fseq.nextval, ?, ?, ?, sysdate, 0, fseq.currval);
+select no from (select * from faq1 order by rownum desc) where rownum=1;
+-- insert into faq1 values (fseq.nextval, ?, ?, 'admin', sysdate, 1, ?);
+
 commit;

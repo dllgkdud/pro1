@@ -85,13 +85,13 @@ $(document).ready(function(){
                             <tr>
                                 <th><label for="pw">비밀번호</label></th>
                                 <td>
-                                	<input type="password" name="pw" required>
+                                	<input type="password" name="pw" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[a-zA-Z]).{8,}$" required>
                                 </td>
                             </tr>
                             <tr>
                                 <th><label for="pw2">비밀번호 확인</label></th>
                                 <td>
-                                	<input type="password" name="pw2" required>
+                                	<input type="password" name="pw2" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[a-zA-Z]).{8,}$" required>
                                 </td>
                             </tr>
                             <tr>
@@ -104,7 +104,7 @@ $(document).ready(function(){
                             </tr>
                             <tr>
                                 <th><label for="tel">연락처</label></th>
-                                <td><input type="tel" name="tel" required></td>
+                                <td><input type="tel" name="tel" pattern="[0-9]{2,3}-[0-9]{3,4}-[0,9]{4}" required></td>
                             </tr>
                             <tr>
                                 <td>
@@ -131,10 +131,15 @@ $(document).ready(function(){
     		alert("아이디 중복체크를 진행해주세요.");
     		return false;
     	}
+    	/* if(f.pw.value!="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[a-zA-Z]).{8,}$"){
+    		alert("영문/숫자/특수문자를 혼합하여 8자 이상 작성해주세요.");
+    		return false;
+    	} */
     }
     function idCheck(){
-    	var win = window.open("idCheck.jsp", "idCheckWin", "width=500, height=400");
+    	var win = window.open("idCheck.jsp", "idCheckWin", "width=600, height=400");
     }
+    
     </script> 
 </body>
 </html>
