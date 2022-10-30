@@ -6,16 +6,16 @@
 관리자는 일반 회원의 관리기능인 '회원 정보 수정', '회원 강제 탈퇴', '회원 통계', '글 관리 기능' 등을 구현한다.
 
 ## 프로젝트 기획
-![Task Flow](./img/database2/taskFlow.png "Task Flow")
-![스토리보드](./img/database2/WebStoryBoard1.png "스토리보드")
+![Task Flow](./img/database2/taskFlow.PNG "Task Flow")
+![스토리보드](./img/database2/WebStoryBoard1.PNG "스토리보드")
 
 ## 프로젝트 설계
-![개념적 설계](./img/database1/pro1_01.png "개념적 설계")
-![논리적 설계](./img/database1/pro1_02.png "논리적 설계")
-![물리적 설계1](./img/database1/pro1_03.png "물리적 설계1")
-![물리적 설계2](./img/database1/pro1_04.png "물리적 설계2")
-![클래스 설계](./img/database1/pro1_05.png "클래스 설계")
-![기능 설계](./img/database1/pro1_06.png "기능 설계")
-![DB ERD](./img/database1/pro1_07.png "DB ERD")
-![회원가입 시퀀스](./img/database1/pro1_08.png "회원가입 시퀀스")
-![로그인 시퀀스](./img/database1/pro1_09.png "로그인 시퀀스")
+![개념적 설계](./img/database1/pro1_01.PNG "개념적 설계")
+![논리적 설계](./img/database1/pro1_02.PNG "논리적 설계")
+![물리적 설계1](./img/database1/pro1_03.PNG "물리적 설계1")
+![물리적 설계2](./img/database1/pro1_04.PNG "물리적 설계2")
+![클래스 설계](./img/database1/pro1_05.PNG "클래스 설계")
+![기능 설계](./img/database1/pro1_06.PNG "기능 설계")
+![DB ERD](./img/database1/pro1_07.PNG "DB ERD")
+![회원가입 시퀀스](./img/database1/pro1_08.PNG "회원가입 시퀀스")
+![로그인 시퀀스](./img/database1/pro1_09.PNG "로그인 시퀀스")
