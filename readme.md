@@ -10,7 +10,7 @@
 ![스토리보드](./img/database2/WebStoryBoard1.png "스토리보드")
 
 ## 프로젝트 설계
-![개념적 설계](./img/database1/pro1_01.PNG "개념적 설계")
+![개념적 설계](./img/database1/pro1_01.png "개념적 설계")
 ![논리적 설계](./img/database1/pro1_02.png "논리적 설계")
 ![물리적 설계1](./img/database1/pro1_03.png "물리적 설계1")
 ![물리적 설계2](./img/database1/pro1_04.png "물리적 설계2")
