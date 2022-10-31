@@ -85,13 +85,14 @@ $(document).ready(function(){
                             <tr>
                                 <th><label for="pw">비밀번호</label></th>
                                 <td>
-                                	<input type="password" name="pw" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[a-zA-Z]).{8,}$" required>
+                                	<!-- pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[a-zA-Z]).{8,}$ -->
+                                	<input type="password" name="pw" required>
                                 </td>
                             </tr>
                             <tr>
                                 <th><label for="pw2">비밀번호 확인</label></th>
                                 <td>
-                                	<input type="password" name="pw2" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.[a-zA-Z]).{8,}$" required>
+                                	<input type="password" name="pw2" required>
                                 </td>
                             </tr>
                             <tr>
@@ -104,7 +105,7 @@ $(document).ready(function(){
                             </tr>
                             <tr>
                                 <th><label for="tel">연락처</label></th>
-                                <td><input type="tel" name="tel" pattern="[0-9]{2,3}-[0-9]{3,4}-[0,9]{4}" required></td>
+                                <td><input type="tel" name="tel" pattern="[0-9]{2,3}-[0-9]{3,4}-[0-9]{4}" required></td>
                             </tr>
                             <tr>
                                 <td>

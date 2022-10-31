@@ -43,13 +43,14 @@ padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; fo
 .req { display: block; float: right; margin: 0; }
 .req:before { content: "* "; clear: both; white-space: nowrap; color: #c50000; letter-spacing: -1px; }
 .not_con { display: block; clear: both; position: relative; }
-.not_con table { width: 60%; height: auto; border: 3px solid #007fa8; margin: 100px auto; padding: 50px; }
+.not_con table { width: 60%; height: auto; border: 3px solid #007fa8; margin: 10px auto; padding: 50px; }
+.not_con p { padding: 0 250px; }
 .not_con table td > textarea { resize: none; }
 .not_con table tr th:after { content: "* "; clear: both; white-space: nowrap; color: #c50000; }
-.not_btn { position: absolute; bottom: -95px; right: 380px; z-index: 85; }
+.not_btn { position: absolute; bottom: -95px; right: 250px; z-index: 85; }
 .btn2_wrap { clear: both; display: block; margin: 20px; }
-[type=reset] { width: 180px; height: 55px; margin-right: 20px; font-size: 16px; color: #fff; letter-spacing: -1px; font-weight: 600; background-color: #888; border: 1px solid #888; cursor: pointer; }
-[type=submit] { width: 180px; height: 55px; margin-left: 20px; font-size: 16px; color: #fff; letter-spacing: -1px; font-weight: 600; background-color: #002c5f; border: 1px solid #002c5f; cursor: pointer; }
+[type=reset] { width: 180px; height: 55px; margin: 0 20px; font-size: 16px; color: #fff; letter-spacing: -1px; font-weight: 600; background-color: #888; border: 1px solid #888; cursor: pointer; }
+[type=submit] { width: 180px; height: 55px; margin: 0 20px; font-size: 16px; color: #fff; letter-spacing: -1px; font-weight: 600; background-color: #002c5f; border: 1px solid #002c5f; cursor: pointer; }
 
 .board { display: block; clear: both; width: 100%; max-width: 1120px; margin: 20px auto; padding: 60px 40px; }
 .board_wrap { margin-bottom: 50px; position: relative; }
@@ -194,6 +195,7 @@ $(document).ready(function(){
                         </div>
                         <div class="not_con">
                             <table>
+                            <p>[ 입력 예시 ]</p>
                                 <tbody>
                                     <tr>
                                         <th><label for="name">이름</label></th>
@@ -201,7 +203,7 @@ $(document).ready(function(){
                                     </tr>
                                     <tr>
                                         <th><label for="email">이메일</label></th>
-                                        <td><input type="eamil" id="email"></td>
+                                        <td><input type="email" id="email"></td>
                                     </tr>
                                     <tr>
                                         <th><label for="title">제목</label></th>
@@ -217,7 +219,8 @@ $(document).ready(function(){
                         <section class="not_btn">
                             <div class="btn2_wrap">
                                 <a><input type="reset" value="취소"></a>
-                                <a href="qna.jsp"><input type="submit" value="등록"></a>
+                                <a href="online.jsp"><input type="submit" value="등록"></a>
+                                <a href="qna.jsp"><input type="submit" value="문의게시판"></a>
                             </div>
                         </section>
                     </div>

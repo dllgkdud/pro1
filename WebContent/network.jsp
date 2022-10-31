@@ -40,20 +40,14 @@
 .ft_wrap { clear: both; width: 1200px; padding: 60px 50px; }
 </style>
 <script>
-$(document).ready(function(){
-    $(window).scroll(function(){
-        var ht = $(window).height();
-        var tp = $(this).scrollTop();
-        if(tp>=600){
-            $(".hd").css("position","fixed");
-        } else {
-            $(".hd").css("position","absolute");
-        }
-    });
-    $
-    $("<ul class='circle_lst lst2'></ul>").insertAfter($(".circle_lst"));
-    $lst1_obj = $(".circle_lst li").clone();
-    $(".circle_lst.lst2").append($lst1_obj);
+$(window).scroll(function(){
+    var ht = $(window).height();
+    var tp = $(this).scrollTop();
+    if(tp>=600){
+        $(".hd").css("position","fixed");
+    } else {
+        $(".hd").css("position","absolute");
+    }
 });    
 </script>
     <link rel="stylesheet" href="footer.css">

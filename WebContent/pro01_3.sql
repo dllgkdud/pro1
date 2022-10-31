@@ -12,6 +12,8 @@ create table qna1 (
 desc qna1;
 drop table qna1;
 
+alter table qna1 add constraint fk_qid foreign key(author) references member1(id);
+
 -- 게시판 번호 추가
 create sequence qseq;
 drop sequence qseq;

@@ -85,12 +85,12 @@
             <div class="bread">
                 <div class="bread_fr">
                     <a href="index.jsp" class="home">홈</a> &gt;
-                    <span class="sel">회원목록</span>
+                    <span class="sel">회원관리</span>
                 </div>
             </div>
             <section class="page">
 	            <div class="page_wrap">
-	                <h2 class="page_tit">회원목록</h2>
+	                <h2 class="page_tit">회원관리</h2>
                 	<div class="list">
                 		<table class="list_wrap">
                 			<thead class="lst_thead">
