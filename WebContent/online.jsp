@@ -34,8 +34,9 @@
 .btn_wrap { clear: both; width: 90%; text-align: center; }
 .btn_wrap > a { width: 400px; height: 40px; margin: 50px ; border: 2px solid #002c5f; background-color:#002c5f; color: #fff; 
 padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
-.btn_wrap > button { width: 125px; height: 46px; margin: 50px ; border: 2px solid #888; background-color:#888; color: #fff; 
+.btn_wrap > button { width: 125px; height: 46px; margin: 50px ; border: 2px solid #888; background-color:#888;  
 padding: 10px 30px; line-height: 25px; font-size: 16px; letter-spacing: -1px; font-weight: 600; }
+.btn_wrap > button > a { color: #fff; }
 .btn_wrap > a:hover { background-color:#007fa8; }
 .btn_wrap > button:hover { background-color:#666; }
 .ft { clear: both; width: 100%; height: 200px; background-color: #1c1b1b; padding-bottom: 50px; }
